@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import BookCreate from './Components/BookCreate'
+import BookList from './Components/BookList'
 
 export default function App() {
     const [books, setBook] = useState([])
@@ -17,5 +18,20 @@ export default function App() {
         ]
         setBook(updateBooks)
     }
-    return <div><BookCreate getTitleProp={createBooks} /></div>
+
+    const deleteBookById = (id) => {
+        const updateBooks = books.filter((book) => {
+            return book.id !== id;
+        })
+        setBook(updateBooks)
+    }
+
+    return (
+
+        <div className='app'>
+            <h1 id='abc'>Reading List</h1>
+            <BookCreate getTitleProp={createBooks} />
+            <BookList booksProp={books} deleteBookIdProp={deleteBookById} />
+        </div>
+    )
 }

@@ -12,6 +12,7 @@ export default function BookCreate({ getTitleProp }) {
     const handleSubmit = (event) => {
         event.preventDefault()
         getTitleProp(title)
+        setTitle('');
     }
 
     return (
