@@ -26,12 +26,23 @@ export default function App() {
         setBook(updateBooks)
     }
 
+
+    const editBookById = (id, newTitle) => {
+        const updateBooks = books.map((book) => {
+            if (book.id === id) {
+                return { ...book, title: newTitle }
+            }
+            return book
+        })
+        setBook(updateBooks)
+    }
+
     return (
 
         <div className='app'>
             <h1 id='abc'>Reading List</h1>
             <BookCreate getTitleProp={createBooks} />
-            <BookList booksProp={books} deleteBookIdProp={deleteBookById} />
+            <BookList booksProp={books} deleteBookIdProp={deleteBookById} editBookProp={editBookById} />
         </div>
     )
 }
