@@ -27,7 +27,7 @@ export default function BookShow({ bookShowProp, deleteBookIdProp, editBookProp 
     return (
         <div className='book-show' id='navBar'>
             <button className='edit' onClick={handleEditBook}>Edit</button>
-            <button onClick={handleDeleteBook} className='delete'>Delete</button>
+            <button onClick={handleDeleteBook} className='delete' id='deletebtn'>Delete</button>
             <img src={`https://picsum.photos/seed/${bookShowProp.id}/300/200`} alt='Random Picture' />
             <div>{content}</div>
         </div>

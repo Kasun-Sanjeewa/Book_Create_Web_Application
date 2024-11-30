@@ -41,8 +41,8 @@ export default function App() {
 
         <div className='app'>
             <h1 id='abc'>Reading List</h1>
-            <BookCreate getTitleProp={createBooks} />
             <BookList booksProp={books} deleteBookIdProp={deleteBookById} editBookProp={editBookById} />
+            <BookCreate getTitleProp={createBooks} />
         </div>
     )
 }

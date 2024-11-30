@@ -3,8 +3,8 @@
     text-align: center;
 }
 
-#navBar {
-    z-index: -1;
+#deletebtn {
+    background-color: #000;
 }
 
 .button,
